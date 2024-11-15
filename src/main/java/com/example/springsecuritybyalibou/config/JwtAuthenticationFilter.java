@@ -1,9 +1,9 @@
 package com.example.springsecuritybyalibou.config;
 
 
-import com.example.springsecuritybyalibou.token.repository.TokenRepository;
-import com.example.springsecuritybyalibou.user.User;
-import com.example.springsecuritybyalibou.user.service.UserService;
+import com.example.springsecuritybyalibou.repository.TokenRepository;
+import com.example.springsecuritybyalibou.model.User;
+import com.example.springsecuritybyalibou.service.UserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

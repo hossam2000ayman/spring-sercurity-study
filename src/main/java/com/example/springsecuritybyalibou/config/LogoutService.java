@@ -1,7 +1,7 @@
 package com.example.springsecuritybyalibou.config;
 
-import com.example.springsecuritybyalibou.token.Token;
-import com.example.springsecuritybyalibou.token.repository.TokenRepository;
+import com.example.springsecuritybyalibou.model.Token;
+import com.example.springsecuritybyalibou.repository.TokenRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;

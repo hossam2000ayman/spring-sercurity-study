@@ -1,4 +1,4 @@
-package com.example.springsecuritybyalibou.auth.dto.response;
+package com.example.springsecuritybyalibou.dto.response;
 
 import lombok.*;
 

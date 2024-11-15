@@ -1,6 +1,6 @@
-package com.example.springsecuritybyalibou.token.repository;
+package com.example.springsecuritybyalibou.repository;
 
-import com.example.springsecuritybyalibou.token.Token;
+import com.example.springsecuritybyalibou.model.Token;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

@@ -1,14 +1,14 @@
-package com.example.springsecuritybyalibou.auth.service;
+package com.example.springsecuritybyalibou.service;
 
-import com.example.springsecuritybyalibou.auth.dto.AuthenticationRequest;
-import com.example.springsecuritybyalibou.auth.dto.RegisterRequest;
-import com.example.springsecuritybyalibou.auth.dto.response.AuthenticationResponse;
+import com.example.springsecuritybyalibou.dto.AuthenticationRequest;
+import com.example.springsecuritybyalibou.dto.RegisterRequest;
+import com.example.springsecuritybyalibou.dto.response.AuthenticationResponse;
 import com.example.springsecuritybyalibou.config.JwtService;
-import com.example.springsecuritybyalibou.token.Token;
-import com.example.springsecuritybyalibou.token.enums.TokenType;
-import com.example.springsecuritybyalibou.token.repository.TokenRepository;
-import com.example.springsecuritybyalibou.user.User;
-import com.example.springsecuritybyalibou.user.UserRepository;
+import com.example.springsecuritybyalibou.model.Token;
+import com.example.springsecuritybyalibou.model.enums.TokenType;
+import com.example.springsecuritybyalibou.repository.TokenRepository;
+import com.example.springsecuritybyalibou.model.User;
+import com.example.springsecuritybyalibou.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;

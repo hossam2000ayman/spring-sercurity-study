@@ -1,6 +1,6 @@
-package com.example.springsecuritybyalibou.user.service;
+package com.example.springsecuritybyalibou.service;
 
-import com.example.springsecuritybyalibou.user.UserRepository;
+import com.example.springsecuritybyalibou.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;

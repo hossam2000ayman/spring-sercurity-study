@@ -1,9 +1,9 @@
-package com.example.springsecuritybyalibou.auth.controller;
+package com.example.springsecuritybyalibou.controller;
 
-import com.example.springsecuritybyalibou.auth.dto.AuthenticationRequest;
-import com.example.springsecuritybyalibou.auth.dto.RegisterRequest;
-import com.example.springsecuritybyalibou.auth.dto.response.AuthenticationResponse;
-import com.example.springsecuritybyalibou.auth.service.AuthenticationService;
+import com.example.springsecuritybyalibou.dto.AuthenticationRequest;
+import com.example.springsecuritybyalibou.dto.RegisterRequest;
+import com.example.springsecuritybyalibou.dto.response.AuthenticationResponse;
+import com.example.springsecuritybyalibou.service.AuthenticationService;
 import lombok.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

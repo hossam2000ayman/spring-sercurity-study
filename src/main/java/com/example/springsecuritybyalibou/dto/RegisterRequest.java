@@ -1,6 +1,6 @@
-package com.example.springsecuritybyalibou.auth.dto;
+package com.example.springsecuritybyalibou.dto;
 
-import com.example.springsecuritybyalibou.user.enums.Role;
+import com.example.springsecuritybyalibou.model.enums.Role;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

@@ -1,8 +1,8 @@
 package com.example.springsecuritybyalibou;
 
-import com.example.springsecuritybyalibou.auth.dto.RegisterRequest;
-import com.example.springsecuritybyalibou.auth.service.AuthenticationService;
-import com.example.springsecuritybyalibou.user.enums.Role;
+import com.example.springsecuritybyalibou.dto.RegisterRequest;
+import com.example.springsecuritybyalibou.service.AuthenticationService;
+import com.example.springsecuritybyalibou.model.enums.Role;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

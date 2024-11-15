@@ -1,4 +1,4 @@
-package com.example.springsecuritybyalibou.user.enums;
+package com.example.springsecuritybyalibou.model.enums;
 
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static com.example.springsecuritybyalibou.user.enums.Permission.*;
+import static com.example.springsecuritybyalibou.model.enums.Permission.*;
 
 public enum Role {
     USER(Collections.emptySet()),

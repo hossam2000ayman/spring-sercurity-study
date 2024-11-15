@@ -1,4 +1,4 @@
-package com.example.springsecuritybyalibou.auth.dto;
+package com.example.springsecuritybyalibou.dto;
 
 import lombok.Builder;
 import lombok.Getter;

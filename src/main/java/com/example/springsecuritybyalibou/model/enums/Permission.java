@@ -1,4 +1,4 @@
-package com.example.springsecuritybyalibou.user.enums;
+package com.example.springsecuritybyalibou.model.enums;
 
 
 public enum Permission {

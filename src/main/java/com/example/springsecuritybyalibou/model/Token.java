@@ -1,7 +1,7 @@
-package com.example.springsecuritybyalibou.token;
+package com.example.springsecuritybyalibou.model;
 
-import com.example.springsecuritybyalibou.token.enums.TokenType;
-import com.example.springsecuritybyalibou.user.User;
+import com.example.springsecuritybyalibou.model.enums.TokenType;
+import com.example.springsecuritybyalibou.model.User;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;

@@ -1,6 +1,6 @@
 package com.example.springsecuritybyalibou.config;
 
-import com.example.springsecuritybyalibou.user.User;
+import com.example.springsecuritybyalibou.model.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;

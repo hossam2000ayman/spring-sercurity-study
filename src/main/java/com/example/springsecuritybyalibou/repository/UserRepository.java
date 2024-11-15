@@ -1,5 +1,6 @@
-package com.example.springsecuritybyalibou.user;
+package com.example.springsecuritybyalibou.repository;
 
+import com.example.springsecuritybyalibou.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

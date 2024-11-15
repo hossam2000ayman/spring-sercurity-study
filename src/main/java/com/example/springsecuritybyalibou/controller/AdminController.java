@@ -1,4 +1,4 @@
-package com.example.springsecuritybyalibou.auth.controller;
+package com.example.springsecuritybyalibou.controller;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
