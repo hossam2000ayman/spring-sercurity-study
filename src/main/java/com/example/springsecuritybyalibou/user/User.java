@@ -1,12 +1,15 @@
 package com.example.springsecuritybyalibou.user;
 
+import com.example.springsecuritybyalibou.token.Token;
 import com.example.springsecuritybyalibou.user.enums.Role;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Setter
@@ -29,6 +32,10 @@ public class User implements UserDetails {
 
     @Enumerated(EnumType.STRING)
     Role role;
+
+    @OneToMany(mappedBy = "user")
+    @JsonManagedReference(value = "user_tokens")
+    List<Token> tokens;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

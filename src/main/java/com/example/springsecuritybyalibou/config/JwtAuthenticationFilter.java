@@ -1,6 +1,7 @@
 package com.example.springsecuritybyalibou.config;
 
 
+import com.example.springsecuritybyalibou.token.repository.TokenRepository;
 import com.example.springsecuritybyalibou.user.User;
 import com.example.springsecuritybyalibou.user.service.UserService;
 import jakarta.servlet.FilterChain;
@@ -25,6 +26,7 @@ import java.io.IOException;
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
     final JwtService jwtService;
     final UserService userService;
+    final TokenRepository tokenRepository;
 
 
     @Override
@@ -50,8 +52,12 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
                 //we need to get the user from database
                 User user = (User) userService.loadUserByUsername(username);
-                //next step is to validate and check the token is still valid or not
-                if (jwtService.isTokenValid(token, user)) {
+                //we need to check if the token is valid also on database side
+                boolean isTokenValid = tokenRepository.findByToken(token)
+                        .map(validToken -> !validToken.isExpired() && !validToken.isRevoked())
+                        .orElse(false);
+                //next step is to validate and check the token is still valid or not + check also on database side
+                if (jwtService.isTokenValid(token, user) && isTokenValid) {
                     // Update Security Context Holder to set Authentication true
                     UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
                     //I want to give some more details about the http request
