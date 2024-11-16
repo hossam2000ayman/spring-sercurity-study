@@ -45,6 +45,7 @@ public enum Role {
     //used for spring security
     public List<SimpleGrantedAuthority> getAuthorities() {
         //add permissions
+        //new SimpleGrantedAuthority(String authority)
         List<SimpleGrantedAuthority> authorities = getPermissions().stream().map(permission -> new SimpleGrantedAuthority(permission.getPermission())).collect(Collectors.toList());
         //then assign the current role
         //** because spring when it needs to work with authorities it needs some prefix "ROLE_"<role-name>

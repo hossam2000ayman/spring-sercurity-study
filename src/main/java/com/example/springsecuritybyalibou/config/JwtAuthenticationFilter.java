@@ -48,7 +48,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 return;
             }
             //check if the user is not authenticated yet to continue the JWT validation process
-            //if user is already authenticate then we not need to go through the JWT validation Process and passing to SecurityContextHolder directly
+            //if user is already authenticate then we not need to go through the JWT validation Process
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
                 //we need to get the user from database
                 User user = (User) userService.loadUserByUsername(username);

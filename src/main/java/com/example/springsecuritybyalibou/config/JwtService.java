@@ -39,12 +39,12 @@ public class JwtService {
 
     //4- Create Token with 3 component (Header , Payload , Signature)
     public String generateToken(Map<String, Object> extraClaims, User user) {
-        //.builder() to create token
+        //.builder() to create token with claims , subject , issuedAt , expiration
         return Jwts.builder()
                 .claims(extraClaims)
                 .subject(user.getUsername())
                 .issuedAt(new Date(System.currentTimeMillis()))
-                .expiration(new Date(System.currentTimeMillis() + (1000 * 60 * 60 *  24)))
+                .expiration(new Date(System.currentTimeMillis() + (1000 * 60 * 60 *  24)))//24 hr
                 .signWith(secretKey, Jwts.SIG.HS256)
                 .compact();
     }

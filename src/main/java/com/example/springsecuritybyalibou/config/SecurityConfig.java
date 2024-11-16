@@ -64,7 +64,7 @@ public class SecurityConfig {
                     //we need to implement all the logout mechanism we didn't specify the logout url yet
                     //spring by default have predefined url for logout, and you can customize it like you want
                     //through the ".logoutUrl"
-                    logout.logoutUrl("/api/v1/auth/logout");// on PostMapping
+                    logout.logoutUrl("/api/v1/auth/logout");// on Get / Post Mapping
                     //so we tell spring that every time you get request for this specific url just execute this logout handler
                     //from logout service
                     logout.addLogoutHandler(logoutService);
